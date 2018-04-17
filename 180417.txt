@@ -4,7 +4,6 @@ virtual envs  - 금융공학만 / 특정 패키지만..
 
 base invironment
 무언가 일을 시킬 때, 명령과 옵션(선택지)
-
 옵션(선택-시킬 것)은 한칸 띄우고, 쓰고, 한칸 띄우고, 쓰고
 
 익숙치 않아서...
@@ -17,55 +16,70 @@ base invironment
 
 
 ------------------------------------------------------------------
-* 코드입력
+* Underscore in Python -   "_" 의 기능 5가지
+
+1. 인터프리터에서 사용되는 경우
+2. 값을 무시하고 싶은 경우
+3. 특별한 의미의 네이밍을 하는 경우
+4. 국제화(i18n)/지역화(l10n) 함수로 사용되는 경우
+5. 숫자 리터럴값의 자릿수 구분을 위한 구분자로써 사용할 때
+
+* 코드입력 (anaconda prompt에서)
 
 conda -- version
 conda update conda     # conda 자체 업그레이드
 
 * 환경변수 설정 다시 해줌 (python / conda)	
 
-* 파이썬 환경관리
-conda create --name snowflakes biopython 
-ipython 
+* 파이썬 환경관리 - Conda를 사용하면 다른 환경과 상호 작용하지 않는 파일, 패키지 및 그 종속성을 포함하는 개별 환경을 작성할 수 있습니다.
+conda create --name snowflakes biopython   # snowflakes 이름으로 BioPython 패키지 설치
 activate snowflakes
-conda create -n bunnies python=3.5 astroid babel  # 3.5 버전으로
 conda info --envs     # 환경을 따로 만들어서 분리시켜놓음
+ipython 
+
+* 파이썬 관리하기
+conda create --name snakes python=2 # 파이썬 2버전 설치 (디폴트로 2.7 버전이 설치됨.)
+conda create -n snakes python=2     2.7.14버전 : 새로 다운로드 중....  
+activate snakes
+conda search beautifulsoup4
+conda install beautifulsoup4
+
+
+conda create -n bunnies python=3.5 astroid babel  # 3.5 버전으로
 conda info --envs 또는 (환경이름)
 -------------------------------------------------
 activate bunnies
-conda create -n bunnies python=3.5 astroid babel
-conda info --envs
 conda remove --name flowers --all              # 제거할 때
 conda remove --help 또는 conda remove -h    # 명령어에 대해 알고 싶을 때
-
 conda info -e
 
-* 파이썬 관리 : Managing Python
-conda search --full -name python # 파이썬 버전 관리
-
-conda create --name snakes python=2 # 파이썬 2버전 설치 (디폴트로 2.7 버전이 설치됨.)
-conda create -n snakes python=2     2.7.14버전 : 새로 다운로드 중....  
-activate snowflakes
-python --version
+=> 정리 : 파이썬에서는 환경관리를 할 수 있다.
+	- 각 상황별로 파이썬의 버전 선택가능 / 원하는 패키지만 설치할 수 있어서
+ 	- 일을 할 떄 구분해서 적용 가능함.
 
 * 패키지 관리 : Managing packages
-          : activate root
-          : conda list
-         : conda search beautifulsoup4 --name bunnies          # bunnies 에다가 해줌        
-          : conda install --name bunnies beautifulsoup4             # 기존환경에 (특정 이름) 새로 설치
-          : activate bunnies
+activate root
+conda list
+conda search beautifulsoup4 --name bunnies          # bunnies 에다가 해줌        
+conda install --name bunnies beautifulsoup4             # 기존환경에 (특정 이름) 새로 설치
+activate bunnies
 
 * 아나콘다 네비게이터
 
        # 현재 base, snowflakes(3.6.5버전), bunnies, snakes (2.7.14버전)
 
 * Conda Cheat Sheet
+      : https://conda.io/docs/_downloads/conda-cheatsheet.pdf
 
 * Zen of Python : 파이선의 철학
    파이썬 선(禪) 아름다움이 추함보다 좋다. 명시가 암시보다 좋다. 단순함이 복잡함보다 좋다. 복잡함이 꼬인 것보다 좋다. 수평이 계층보다 좋다. 여유로운 것이 밀집한 것보다 좋다. 가독성은 중요하다. 특별한 경우라는 것은 규칙을 어겨야 할 정도로 특별한 것이 아니다. 허나 실용성은 순수성에 우선한다. 오류 앞에서 절대 침묵하지 말지어다. 명시적으로 오류를 감추려는 의도가 아니라면. 모호함을 앞에 두고, 이를 유추하겠다는 유혹을 버려라. 어떤 일에든 명확한 - 바람직하며 유일한 - 방법이 존재한다. 비록 그대가 우둔하여 그 방법이 처음에는 명확해 보이지 않을지라도. 지금 하는게 아예 안하는 것보다 낫다. 아예 안하는 것이 지금 *당장*보다 나을 때도 있지만. 구현 결과를 설명하기 어렵다면, 그 아이디어는 나쁘다. 구현 결과를 설명하기 쉽다면, 그 아이디어는 좋은 아이디어일 수 있다. 네임스페이스는 대박 좋은 아이디어다 -- 마구 남용해라!
-  import this
-  PEP  / 
-  metadata - data on data
+
+* Python Coding Convention
+
+ - PEP 8 : PEP(Python Enhance Proposal) : 개선하기 위한 개선 제안서
+
+*  metadata - data on data
+
 
 
 * 시작 디렉토리 설정
@@ -74,28 +88,21 @@ cd C:\dev    		# cd 사용
 jupyter notebook
 jupyter notebook --generate-config   #  config 파일 생성
 jupyter_notebook_config.py 열기
- 사용자 폴더에 .jupyter 폴더 진입
+사용자 폴더에 .jupyter 폴더 진입
 idle jupyter_notebook_config.py    # 실행해서 _dir 검색 # 주석지우고, 'C:\dev\_python'에 경로 넣어주기.
 
 
 * 자료파일 옮기기 python-book 관련 ipynb 파일
 
-
 * da36 새로 환경 생성 ( 아나콘다 네비게이터 로 ) - jupyter notebook 새로 install 해줌 : 구분된 환경을 구현하기 위해서.
 	( 환경 구분 시키려면 네비게이터로 주피터 노트북 실행할 것!)
 - python3 파일 새로 생성
--  import numpy as np  #아직 설치 안되서 사용 xxx
+- import numpy as np  #아직 설치 안되서 사용 xxx
 - numpy . pandas 설치
-
-
-
-
-
-
-
-
 
 * Jupyter Notebook 셀에서 값을 연속적으로 출력
 
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = 'all'
+
+
