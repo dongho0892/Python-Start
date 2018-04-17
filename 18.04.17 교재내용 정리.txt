@@ -1,0 +1,34 @@
+파이썬 기초
+
+ - 1. 시멘틱(sementic)
+	- 들여쓰기  	: 기본 스페이스 4칸
+	- 모든 것은 객체	: == 상자
+	- 주석		: #
+	- 함수와 객체 메서드 호출 :
+	- 변수와 참조에 의한 전달 : = 대입연산자 / 가리킨다.
+	- 동적 참조와 강한 타입    : 자료형 정해져 있지 X 		 isinstance() : 무슨 자료형인가 검사 
+	- 속성	: 그 객체 내부에 저장되는 다른 파이썬 객체
+	- 메서드	: 그 객체의 내부 데이터에 접근할 수 있는 함수
+	- 						getattr() : 그 이름으로 접근 가능
+	- 덕타이핑 : 어떤 메서드나 행동을 지원하는지만 알고 싶은 경우 	__iter__
+	- 모듈 import 	: 다른 py 파일에서 추가해서 사용할 수 있는 함수와 변수 선언을 담고 있는 .py파일 						
+	- 이항연산자와 비교문 :  
+			  is / is not 두 참조 변수가 같은 객체를 가리키고 있는가?
+			 == / !=                                      값을 갖고 있는가?
+	- 평가방식		: Strictnes vs Laziness - python = 항상 계산과 표현은 즉시 수행한다. 
+			: mutable - 리스트, 사전    vs  immutable - 튜플 / 문자열
+ - 2. 스칼라형
+	- 숫자자료형	:
+	- 문자열		: immutable / .replace(전,후) / str함수 = 문자열로 변환 가능 / \\ / r'\~\~\'
+			: 변수명 = '%d, %s, %.2f' / 
+	- 불리언(boolean)	: [], 0, '' => False 
+	- 형 변환		: str, bool, int, float   // type()
+	- None		: null
+	- 날짜와 시간	: datetime, date, time형
+
+ - 3. 흐름제어
+	- if , elif, else	:  if 조건:     내용          elif 조건:     내용      else:   내용
+	- for 반복문	:   for 변수명 in 객체(내용 多) :   + continue / break
+	- while 반복문	:  while 조건: 내용   	+ False / break 
+	- pass		:  아무것도 하지 않음
+	- 예외처리		:  try:  ~ except: ~ 
