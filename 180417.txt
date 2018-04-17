@@ -85,3 +85,17 @@ idle jupyter_notebook_config.py    # 실행해서 _dir 검색 # 주석지우고, 'C:\dev\_p
 	( 환경 구분 시키려면 네비게이터로 주피터 노트북 실행할 것!)
 - python3 파일 새로 생성
 -  import numpy as np  #아직 설치 안되서 사용 xxx
+- numpy . pandas 설치
+
+
+
+
+
+
+
+
+
+* Jupyter Notebook 셀에서 값을 연속적으로 출력
+
+from IPython.core.interactiveshell import InteractiveShell
+InteractiveShell.ast_node_interactivity = 'all'
