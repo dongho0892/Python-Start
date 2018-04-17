@@ -1,0 +1,39 @@
+
+패키지는 깔끔하게 하나씩만 쓰는 것이 좋겠다.
+virtual envs  - 금융공학만 / 특정 패키지만..
+
+base invironment
+무언가 일을 시킬 때, 명령과 옵션(선택지)
+
+옵션(선택-시킬 것)은 한칸 띄우고, 쓰고, 한칸 띄우고, 쓰고
+
+익숙치 않아서...
+빠르게 빠르게 여러 번 보자...
+욕심을 내려보고... 
+기억에 있는 것 빠르게 넘기고... 
+밥먹고 또 보고... 빠르게 자주...
+지치지 않게...
+習... 99번 많이 연습해봐라... 익숙해지도록 계속 해봐야 된다...
+
+
+------------------------------------------------------------------
+* 코드입력
+
+conda -- version
+conda update conda     # conda 자체 업그레이드
+
+* 환경변수 설정 다시 해줌 (python / conda)	
+
+* 파이썬 환경관리
+conda create --name snowflakes biopython  
+activate snowflakes
+conda create -n bunnies python=3.5 astroid babel  # 3.5 버전으로
+conda info --envs
+conda info --envs 또는 (환경이름)
+activate bunnies
+conda create -n bunnies python=3.5 astroid babel
+conda info --envs
+conda remove --name flowers --all              # 제거할 때
+conda remove --help 또는 conda remove -h    # 명령어에 대해 알고 싶을 때
+
+conda info -e
