@@ -1,0 +1,226 @@
+18.04.16 ==================================================
+
+패키지는 깔끔하게 하나씩만 쓰는 것이 좋겠다.
+virtual envs  - 금융공학만 / 특정 패키지만..
+
+base invironment
+무언가 일을 시킬 때, 명령과 옵션(선택지)
+옵션(선택-시킬 것)은 한칸 띄우고, 쓰고, 한칸 띄우고, 쓰고
+
+익숙치 않아서...
+빠르게 빠르게 여러 번 보자...
+욕심을 내려보고... 
+기억에 있는 것 빠르게 넘기고... 
+밥먹고 또 보고... 빠르게 자주...
+지치지 않게...
+習... 99번 많이 연습해봐라... 익숙해지도록 계속 해봐야 된다...
+
+
+------------------------------------------------------------------
+* Underscore in Python -   "_" 의 기능 5가지
+
+1. 인터프리터에서 사용되는 경우
+2. 값을 무시하고 싶은 경우
+3. 특별한 의미의 네이밍을 하는 경우
+4. 국제화(i18n)/지역화(l10n) 함수로 사용되는 경우
+5. 숫자 리터럴값의 자릿수 구분을 위한 구분자로써 사용할 때
+
+* 코드입력 (anaconda prompt에서)
+
+conda -- version
+conda update conda     # conda 자체 업그레이드
+
+* 환경변수 설정 다시 해줌 (python / conda)	
+
+* 파이썬 환경관리 - Conda를 사용하면 다른 환경과 상호 작용하지 않는 파일, 패키지 및 그 종속성을 포함하는 개별 환경을 작성할 수 있습니다.
+conda create --name snowflakes biopython   # snowflakes 이름으로 BioPython 패키지 설치
+activate snowflakes
+conda info --envs     # 환경을 따로 만들어서 분리시켜놓음
+ipython 
+
+* 파이썬 관리하기
+conda create --name snakes python=2 # 파이썬 2버전 설치 (디폴트로 2.7 버전이 설치됨.)
+conda create -n snakes python=2     2.7.14버전 : 새로 다운로드 중....  
+activate snakes
+conda search beautifulsoup4
+conda install beautifulsoup4
+
+
+conda create -n bunnies python=3.5 astroid babel  # 3.5 버전으로
+conda info --envs 또는 (환경이름)
+-------------------------------------------------
+activate bunnies
+conda remove --name flowers --all              # 제거할 때
+conda remove --help 또는 conda remove -h    # 명령어에 대해 알고 싶을 때
+conda info -e
+
+=> 정리 : 파이썬에서는 환경관리를 할 수 있다.
+	- 각 상황별로 파이썬의 버전 선택가능 / 원하는 패키지만 설치할 수 있어서
+ 	- 일을 할 떄 구분해서 적용 가능함.
+
+* 패키지 관리 : Managing packages
+activate root
+conda list
+conda search beautifulsoup4 --name bunnies          # bunnies 에다가 해줌        
+conda install --name bunnies beautifulsoup4             # 기존환경에 (특정 이름) 새로 설치
+activate bunnies
+
+* 아나콘다 네비게이터
+
+       # 현재 base, snowflakes(3.6.5버전), bunnies, snakes (2.7.14버전)
+
+* Conda Cheat Sheet
+      : https://conda.io/docs/_downloads/conda-cheatsheet.pdf
+
+* Zen of Python : 파이선의 철학
+   파이썬 선(禪) 아름다움이 추함보다 좋다. 명시가 암시보다 좋다. 단순함이 복잡함보다 좋다. 복잡함이 꼬인 것보다 좋다. 수평이 계층보다 좋다. 여유로운 것이 밀집한 것보다 좋다. 가독성은 중요하다. 특별한 경우라는 것은 규칙을 어겨야 할 정도로 특별한 것이 아니다. 허나 실용성은 순수성에 우선한다. 오류 앞에서 절대 침묵하지 말지어다. 명시적으로 오류를 감추려는 의도가 아니라면. 모호함을 앞에 두고, 이를 유추하겠다는 유혹을 버려라. 어떤 일에든 명확한 - 바람직하며 유일한 - 방법이 존재한다. 비록 그대가 우둔하여 그 방법이 처음에는 명확해 보이지 않을지라도. 지금 하는게 아예 안하는 것보다 낫다. 아예 안하는 것이 지금 *당장*보다 나을 때도 있지만. 구현 결과를 설명하기 어렵다면, 그 아이디어는 나쁘다. 구현 결과를 설명하기 쉽다면, 그 아이디어는 좋은 아이디어일 수 있다. 네임스페이스는 대박 좋은 아이디어다 -- 마구 남용해라!
+
+* Python Coding Convention
+
+ - PEP 8 : PEP(Python Enhance Proposal) : 개선하기 위한 개선 제안서
+
+*  metadata - data on data
+
+
+
+* 시작 디렉토리 설정
+
+cd C:\dev    		# cd 사용
+jupyter notebook
+jupyter notebook --generate-config   #  config 파일 생성
+jupyter_notebook_config.py 열기
+사용자 폴더에 .jupyter 폴더 진입
+idle jupyter_notebook_config.py    # 실행해서 _dir 검색 # 주석지우고, 'C:\dev\_python'에 경로 넣어주기.
+
+
+* 자료파일 옮기기 python-book 관련 ipynb 파일
+
+* da36 새로 환경 생성 ( 아나콘다 네비게이터 로 ) - jupyter notebook 새로 install 해줌 : 구분된 환경을 구현하기 위해서.
+	( 환경 구분 시키려면 네비게이터로 주피터 노트북 실행할 것!)
+- python3 파일 새로 생성
+- import numpy as np  #아직 설치 안되서 사용 xxx
+- numpy . pandas 설치
+
+* Jupyter Notebook 셀에서 값을 연속적으로 출력
+
+from IPython.core.interactiveshell import InteractiveShell
+InteractiveShell.ast_node_interactivity = 'all'
+
+
+18.04.17 ==================================================
+
+
+파이썬 기초 (부록 내용)
+
+1 - 1. 파이썬 인터프리터
+
+2 - 1. 시멘틱(sementic)
+	- 들여쓰기  	: 기본 스페이스 4칸
+	- 모든 것은 객체	: == 상자
+	- 주석		: #
+	- 함수와 객체 메서드 호출 :
+	- 변수와 참조에 의한 전달 : = 대입연산자 / 가리킨다.
+	- 동적 참조와 강한 타입    : 자료형 정해져 있지 X 		 isinstance() : 무슨 자료형인가 검사 
+	- 속성	: 그 객체 내부에 저장되는 다른 파이썬 객체
+	- 메서드	: 그 객체의 내부 데이터에 접근할 수 있는 함수
+	- 						getattr() : 그 이름으로 접근 가능
+	- 덕타이핑 : 어떤 메서드나 행동을 지원하는지만 알고 싶은 경우 	__iter__
+	- 모듈 import 	: 다른 py 파일에서 추가해서 사용할 수 있는 함수와 변수 선언을 담고 있는 .py파일 						
+	- 이항연산자와 비교문 :  
+			  is / is not 두 참조 변수가 같은 객체를 가리키고 있는가?
+			 == / !=                                      값을 갖고 있는가?
+	- 평가방식		: Strictnes vs Laziness - python = 항상 계산과 표현은 즉시 수행한다. 
+			: mutable - 리스트, 사전    vs  immutable - 튜플 / 문자열
+2 - 2. 스칼라형
+	- 숫자자료형	:
+	- 문자열		: immutable / .replace(전,후) / str함수 = 문자열로 변환 가능 / \\ / r'\~\~\'
+			: 변수명 = '%d, %s, %.2f' / 
+	- 불리언(boolean)	: [], 0, '' => False 
+	- 형 변환		: str, bool, int, float   // type()
+	- None		: null
+	- 날짜와 시간	: datetime, date, time형
+
+2 - 3. 흐름제어
+	- if , elif, else	:  if 조건:     내용          elif 조건:     내용      else:   내용
+	- for 반복문	:   for 변수명 in 객체(내용 多) :   + continue / break
+	- while 반복문	:  while 조건: 내용   	+ False / break 
+	- pass		:  아무것도 하지 않음
+	- 예외처리		:  try:  ~ except: ~
+	- range vs xrange	: 3. = range() / 2. xrange()
+	- 삼단 표현(Ternary) 	:   T일때의 값    조건문    F일때의 값
+
+3. 자료구조 / 순차 자료형
+
+3 - 1. 튜플(tuple)		: 1차원의 고정된 크기를 가지는 변경이 불가능한 순차 자료형
+			: 변수명 = 값, 값, 값 ( 값이 한개일 경우 , 필수 ex> = 1, ) 
+			: 중첩된 튜플 정의 가능 /   = (4,5,6),(7,8)
+								tuple() : 튜플로 변환하는 메서드
+	- 튜플에거 값 분리하기 :  변수명 = (4,5,6, (7,8))   /  :  a,b,c,d = 변수명   / b, a = a, b
+	- 튜플 메서드	: 					.count() - () 값의 갯수 세기
+								.index() - () 값의 색인(index) 값을 보여줌
+ 
+3 - 2. 리스트(list)		:  크기나 내용의 변경 가능  /  [    ], list()로 형성 가능
+	- 원소 추가 / 삭제	: 					.append(값)       : 리스트의 끝에 새로운 값을 추가할 수 있다.  
+ 								.insert(위치, 값) : 리스트의 특정 위치에 값을 추가할 수 있다.
+								.pop()	         : 특정 위치에서 값을 반환하여 보여주고(꺼내고), 해당 값을 리스트에서 삭제한다.
+								.remove() 	         : 리스트의 제일 앞에 위치한 값부터 이루진다.
+								     in 	      :  리스트에 어떤 값이 있는지 검사 가능함. 
+	- 리스트 이어붙이기	:      +				                  .extend() 	    : 기존 리스트 값에 () 안이 값 추가 가능
+	- 정렬		: 					.sort()	       : () 조건으로 정렬 가능 / key=len : 문자열 길이순으로
+	- 이진탐색과 정렬된 리스트 유지하기 :  
+	- 슬라이싱		: [   :   ]
+	
+3 - 3. 내장 순차 자료형 함수
+	- enumerate	: 순차 자료형에서 현재 아이템의 색인을 함께 처리할 때 사용	: 색인을 통해 데이터에 접근할 때				
+	- sorted		: 정렬된 새로운 순차형 자료형을 반환		sorted()	 : 
+	- zip		: 여러개의 리스트 / 튜플 or 다른 순차자료형을 
+			  서로 짝지어 튜플의 리스트를 형성		zip()  	 : 서로 짝지어서 튜플의 리스트를 생성
+	- reversed		: 순차 자료형을 역순으로 리턴			reversed()  : 순차 자료형을 역순으로 보여줌
+
+3 - 4. 사전			: 해시맵 , 연관 배열 / 키 - 밸류 쌍으로 모두 파이썬 객체  / { } 사용 표시
+	- 순차 자료 구조에서 사전 생성하기
+	- 기본 값							.get(key,value)  : 키 값 없으면 = None
+								.pop(key,value) :                      = 예외 발생
+								.setdefault()   / .defalutdict()
+	- 유효한 사전 키 	: 키는 스칼라형(정수, 실수, 문자열)이나 튜플(튜플에 저장된 값도 바뀌면x)처럼
+                       		  값이 바뀌지 않는 객체만 사용 가능함. 		hash() 	: 사전의 키로 사용할 수 있는지 판단하는 함수 
+
+3 - 5. 세트			: 유일한 원소만 담는 정렬되지 않은 자료형. 		set() 함수
+								{ } 중괄호 이용
+	- Set 연산							.add() / .remove() / .union() / .intersection()
+								.difference() / .symmetric_difference()
+								.issubset() / issuperset() / isdisjoint()	
+	
+
+3 - 6. 리스트, 사전, 세트 내포(comprehension) 	: 간결한 표현으로 쓸 수 있음.
+	- 리스트 [ ]  / 세트  { }  /   사전 내포
+	- 중첩된 리스트 내포
+
+4. 함수 			: 코드를 재사용하고, 조직화 하기 위한 수단   		def ~~    / return
+
+4 - 1. namespace, scope, local function
+	- 전역(global), 지역(local) = 스코프(scope)에서 변수를 참조함.
+	- 변수의 스코프를 설명        = 네임스페이스(namespace)
+
+4 - 2. 여러값 반환하기
+
+4 - 3. 함수도 객체다.
+
+4 - 4. 익명함수 - 람다 (lambda)
+
+4 - 5. 클로저(closure) : 함수에 의해 리턴되는 함수
+
+4 - 6. "args, **kwargs를 사용하여 호출 문법 확장하기
+
+4 - 7. 커링 : 일부 인자만 취하기
+
+4 - 8. 제너레이터 
+	- 제너레이터 표현식
+	- itertools 모듈
+
+5. 파일과 운영체제
+
+
+18.04.18 ==================================================
+
+ * Numpy 
